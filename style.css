@@ -1,0 +1,231 @@
+body{
+    text-align: center;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color:#222;
+    background-color: bisque;
+}
+header{
+    background: linear-gradient(90deg, #C50, #F90,#C50);
+    padding-bottom: 1%;
+    padding-top: 0%;
+}
+h1{
+    margin: 0px;
+    color: #FFF;
+    padding: 1%;
+}
+#div-nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0.5%;
+    background: repeating-linear-gradient(90deg,#70220D 0px, #70220D 10px,
+     #111 10px, #111 15px);
+    color: #FFF;
+}
+#div-nome img,h2{
+    padding: 0.2% 2%;
+    margin: 0%;
+}
+#div-nome img{
+    animation-name: icon-anim;
+    animation-duration: 1.5s;
+    transform: rotate(-45deg);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+h3,h4{
+    text-align: left;
+    width: 30%;
+    color: #DDD;
+    padding: 0.5%;
+    border-radius: 5px;
+}
+h3{
+    background-color: #C50;
+    padding-left: 5%;
+}
+h4{
+    background-color: #333;
+    padding-left: 1%;
+    margin-left: 4%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header:hover .div-quadros{
+    animation-name: quadros_anim;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+.a-quadros{
+    text-decoration: none;
+    color: #FFF;
+    margin: 0% 0.5%;
+}
+.div-quadros{
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 80px;
+    width: 200px;
+    box-shadow: 10px 10px 20px rgba(20, 20, 20, .7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a-quadros:hover{
+    animation-name: quadro_anim;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+
+#div-historia{
+    background-image: url("img/historia.jpg");
+}
+#div-comidas{
+    background-image: url("img/comidas.png");
+}
+#div-musicas{
+    background-image: url("img/musicas.jpg");
+}
+#div-dancas{
+    background-image: url("img/danca.png");
+}
+
+main{
+    margin: 0% 10%;
+    padding: 1%;
+    background-color: #EEE;
+    box-shadow: 0px 10px 15px rgba(20, 20, 20, .3);
+}
+main p{
+    text-align: justify;
+}
+
+#img-redonda{
+    border-radius: 50%;
+}
+
+footer{
+    margin: 1% 10%;
+    padding: 0.5%;
+    background-color: #70220D;
+    color: #FFF;
+}
+footer li,a{
+    color: #00F;
+    list-style: none;
+}
+
+/*COMIDAS*/
+#tabela-receitas h3, #regioes h3{
+    margin: 5px;
+    text-align: left;
+    width: 100%;
+    background: linear-gradient(90deg,  #80320D,#A0522D);
+    padding: 0.5%;
+    border-radius: 0px;
+    box-shadow: -5px 5px 2px rgba(20, 20, 20, .3);
+}
+.div-receita, #container-hist{
+    display: flex;
+    align-items: center;
+}
+.div-receita img, #container-hist img{
+    margin: 0% 10% 0% 5%;
+    flex-grow: 2;
+    width: 50%;
+    height: 50%;
+}
+#container-hist p{
+    flex-grow: 1;
+    font-size: 18px;
+}
+.div-receita p{
+    padding-left: 8%;
+}
+
+
+
+/*MÚSICAS*/
+#div-iframes iframe{
+    width: 100%;
+    background: linear-gradient(90deg, #443, #778);
+    animation-name: iframe-anim;
+    animation-duration: 1s;
+    animation-iteration-count: 10;
+}
+#div-iframes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.3% 2.5%;
+    margin: 0% 10%;
+    padding: 2%;
+    background-color: #333;
+    box-shadow: 0px 10px 15px rgba(20, 20, 20, .3);
+}
+#div-iframes h3{
+    margin: 0px;
+    width: 100%;
+    padding: 2% 0%;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background: linear-gradient(90deg,#DDA500, #FFD700);
+}
+
+/*REGIÕES*/
+#regioes h3{
+    background: linear-gradient(90deg,#56f, #98F);
+}
+
+
+@keyframes quadros_anim{
+    100%{
+        height: 200px;
+        width: 200px;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, .5);;
+        background-color: rgba(0, 0, 0, .1);
+    }
+}
+@keyframes quadro_anim{
+    100%{
+        font-size: 22px;
+        font-weight: bolder;
+        transform: scale(1.1);
+        -webkit-text-stroke-width: 3px;
+    }
+}
+@keyframes icon-anim{
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+@keyframes iframe-anim{
+    50%{
+        background: linear-gradient(90deg, #555, #555);
+    }
+    100%{
+        background: linear-gradient(90deg, #443, #778);
+    }
+}
+
+@media(max-width:800px){
+    .div-receita, #container-hist{
+        display: inline;
+        align-items: center;
+    }
+}
